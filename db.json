@@ -1,0 +1,8 @@
+{
+  "bugs": [],
+  "users": [
+    { "id": 1, "username": "ark", "password": "1234", "level": "Admin" },
+    { "id": 2, "username": "Blob", "password": "1234", "level": "worker" },
+    { "id": 3, "username": "goku", "password": "1234", "level": "worker" }
+  ]
+}

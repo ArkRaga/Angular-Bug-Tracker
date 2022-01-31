@@ -1,0 +1,8 @@
+<app-bug-report
+  *ngIf="!submition"
+  (sendBugReport)="submitBugReport($event)"
+></app-bug-report>
+<div *ngIf="submition">
+  <h3>Thankyou For your submission!</h3>
+  <p>we will be getting to it as quickly as possible.</p>
+</div>
