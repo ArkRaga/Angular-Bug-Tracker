@@ -8,9 +8,10 @@ import { MainPageComponent } from './pages/main-page/main-page.component';
 import { BugReportComponent } from './components/bug-report/bug-report.component';
 import { BugCardComponent } from './components/bug-card/bug-card.component';
 import { WorkerPageComponent } from './pages/worker-page/worker-page.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
-  declarations: [AppComponent, MainPageComponent, BugReportComponent, BugCardComponent, WorkerPageComponent],
+  declarations: [AppComponent, MainPageComponent, BugReportComponent, BugCardComponent, WorkerPageComponent, LoginComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

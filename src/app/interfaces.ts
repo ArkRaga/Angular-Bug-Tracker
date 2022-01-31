@@ -6,3 +6,10 @@ export interface BUGREPORT {
   assignedWorker?: string;
   status: string;
 }
+
+export interface USER {
+  id?: number;
+  username: string;
+  password?: string;
+  level?: string;
+}

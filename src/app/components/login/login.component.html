@@ -1,0 +1,24 @@
+<div *ngIf="triedLogin">
+  <h3>Failure to Login</h3>
+  <h4>Please check spelling or reach out to admin</h4>
+</div>
+<form (ngSubmit)="submitLogin()">
+  <label for="username">Username:</label>
+  <input
+    [(ngModel)]="username"
+    type="text"
+    name="username"
+    id="username"
+    placeholder="input username"
+    autocomplete="off"
+  />
+  <label for="password">Password:</label>
+  <input
+    [(ngModel)]="password"
+    type="password"
+    name="password"
+    id="password"
+    placeholder="input password"
+  />
+  <input type="submit" value="Login" />
+</form>
