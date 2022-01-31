@@ -2,6 +2,9 @@
   <h3>Failure to Login</h3>
   <h4>Please check spelling or reach out to admin</h4>
 </div>
+<div *ngIf="!triedLogin">
+  <h3>Please Login</h3>
+</div>
 <form (ngSubmit)="submitLogin()">
   <label for="username">Username:</label>
   <input

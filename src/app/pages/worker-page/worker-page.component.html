@@ -1,7 +1,17 @@
-<p>worker-page works!</p>
 <app-login
-  [triedLogin]="isTriedLoggIn"
   *ngIf="!isLoggedIn"
+  [triedLogin]="isTriedLoggIn"
   (sendLogin)="login($event)"
 ></app-login>
-<app-bug-card *ngIf="isLoggedIn"></app-bug-card>
+<div *ngIf="isLoggedIn">
+  <app-all-bugs
+    class="All"
+    [bugReports]="bugCards"
+    (acceptBugReport)="userAcceptBugReport($event)"
+  ></app-all-bugs>
+  <app-assigned-bugs
+    class="Assigned"
+    [bugReports]="bugCards"
+    [user]="currentUser"
+  ></app-assigned-bugs>
+</div>

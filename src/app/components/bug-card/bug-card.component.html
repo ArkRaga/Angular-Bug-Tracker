@@ -1,1 +1,15 @@
-<p>bug-card works!</p>
+<div class="class">
+  <h2>Catagory: {{ report.catagory }}</h2>
+  <p>Description: {{ report.description }}</p>
+  <h3>Worker: {{ report.assignedWorker }}</h3>
+  <div *ngIf="report.status !== 'New'">
+    <label for="status">Status</label>
+    <select name="status" id="status" [(ngModel)]="status">
+      <option *ngFor="let sta of statuses">{{ sta }}</option>
+    </select>
+  </div>
+  <h3 *ngIf="report.status === 'New'">Status: {{ report.status }}</h3>
+  <h4>Reporters name: {{ report.name }}</h4>
+  <button *ngIf="isEditable" (click)="acceptReport()">Accept</button>
+  <button *ngIf="!isEditable" (click)="finishReport()">Finalize</button>
+</div>

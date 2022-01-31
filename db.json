@@ -1,8 +1,88 @@
 {
-  "bugs": [],
+  "bugs": [
+    {
+      "id": 1,
+      "name": "testboi1",
+      "catagory": "Gameplay",
+      "description": "test text",
+      "status": "New",
+      "assignedWorker": "None"
+    },
+    {
+      "id": 2,
+      "name": "testboi2",
+      "catagory": "Gameplay",
+      "description": "test text",
+      "status": "New",
+      "assignedWorker": "None"
+    },
+    {
+      "id": 3,
+      "name": "testboi3",
+      "catagory": "Gameplay",
+      "description": "test text",
+      "status": "in-progress",
+      "assignedWorker": "Blob"
+    },
+    {
+      "id": 4,
+      "name": "testboi4",
+      "catagory": "Gameplay",
+      "description": "test text",
+      "status": "in-progress",
+      "assignedWorker": "Ark"
+    },
+    {
+      "id": 5,
+      "name": "testboi5",
+      "catagory": "Gameplay",
+      "description": "test text",
+      "status": "in-progress",
+      "assignedWorker": "Ark"
+    },
+    {
+      "id": 6,
+      "name": "testboi6",
+      "catagory": "Gameplay",
+      "description": "test text",
+      "status": "in-progress",
+      "assignedWorker": "Ark"
+    },
+    {
+      "id": 7,
+      "name": "testboi7",
+      "catagory": "Gameplay",
+      "description": "test text",
+      "status": "in-progress",
+      "assignedWorker": "Blob"
+    },
+    {
+      "id": 8,
+      "name": "testboi8",
+      "catagory": "Gameplay",
+      "description": "test text",
+      "status": "in-progress",
+      "assignedWorker": "Blob"
+    }
+  ],
   "users": [
-    { "id": 1, "username": "ark", "password": "1234", "level": "Admin" },
-    { "id": 2, "username": "Blob", "password": "1234", "level": "worker" },
-    { "id": 3, "username": "goku", "password": "1234", "level": "worker" }
+    {
+      "id": 1,
+      "username": "ark",
+      "password": "1234",
+      "level": "Admin"
+    },
+    {
+      "id": 2,
+      "username": "Blob",
+      "password": "1234",
+      "level": "worker"
+    },
+    {
+      "id": 3,
+      "username": "goku",
+      "password": "1234",
+      "level": "worker"
+    }
   ]
 }

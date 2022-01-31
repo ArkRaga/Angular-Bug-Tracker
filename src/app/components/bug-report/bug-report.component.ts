@@ -9,13 +9,6 @@ import { BUGREPORT } from 'src/app/interfaces';
 export class BugReportComponent implements OnInit {
   @Output() sendBugReport: EventEmitter<BUGREPORT> = new EventEmitter();
   catagories: Array<string> = ['Gameplay', 'Controls', 'Audio', 'Other'];
-  statuses: Array<string> = [
-    'New',
-    'Assigned',
-    'In-progress',
-    'Solved',
-    'Unresolveable',
-  ];
   name!: string;
   catagory!: string;
   description!: string;
@@ -31,7 +24,7 @@ export class BugReportComponent implements OnInit {
       name: this.name,
       catagory: this.catagory,
       description: this.description,
-      status: this.statuses[0],
+      status: 'New',
       assignedWorker: 'None',
     };
     console.log('Bug: ', newBug);
