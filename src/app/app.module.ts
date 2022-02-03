@@ -11,6 +11,7 @@ import { LoginComponent } from './components/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AssignedBugsComponent } from './components/assigned-bugs/assigned-bugs.component';
 import { AllBugsComponent } from './components/all-bugs/all-bugs.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { AllBugsComponent } from './components/all-bugs/all-bugs.component';
     LoginComponent,
     AssignedBugsComponent,
     AllBugsComponent,
+    LoginPageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

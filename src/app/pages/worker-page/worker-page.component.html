@@ -1,9 +1,4 @@
-<app-login
-  *ngIf="!isLoggedIn"
-  [triedLogin]="isTriedLoggIn"
-  (sendLogin)="login($event)"
-></app-login>
-<div *ngIf="isLoggedIn">
+<div>
   <app-all-bugs
     class="All"
     [bugReports]="bugCards"

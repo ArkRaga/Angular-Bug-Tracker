@@ -1,5 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { USER } from 'src/app/interfaces';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +14,7 @@ export class LoginComponent implements OnInit {
   username!: string;
   password!: string;
 
-  constructor() {}
+  constructor(private loginService: LoginService, private router: Router) {}
 
   ngOnInit(): void {}
   submitLogin(): void {
@@ -23,7 +25,15 @@ export class LoginComponent implements OnInit {
       username: this.username,
       password: this.password,
     };
-    this.sendLogin.emit(newUser);
+    console.log('trying to login: ', this.loginService.login(newUser));
+    this.loginService.login(newUser).subscribe((v) => {
+      if (v) {
+        this.router.navigate(['/worker']);
+        this.triedLogin = false;
+      } else {
+        this.triedLogin = true;
+      }
+    });
     this.resetForm();
   }
   checkForm(): boolean {

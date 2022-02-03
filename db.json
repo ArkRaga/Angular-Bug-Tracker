@@ -5,8 +5,8 @@
       "name": "testboi1",
       "catagory": "Gameplay",
       "description": "test text",
-      "status": "New",
-      "assignedWorker": "None"
+      "status": "in-progress",
+      "assignedWorker": "goku"
     },
     {
       "id": 2,
