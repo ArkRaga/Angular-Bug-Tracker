@@ -13,11 +13,7 @@ export class AllBugsComponent implements OnInit {
   reports!: BUGREPORT[];
   constructor() {}
 
-  ngOnInit(): void {
-    this.reports = this.bugReports.filter(
-      (ele) => ele.status.toLowerCase() === 'new'
-    );
-  }
+  ngOnInit(): void {}
   userAcceptBugReport(report: BUGREPORT) {
     this.acceptBugReport.emit(report);
   }

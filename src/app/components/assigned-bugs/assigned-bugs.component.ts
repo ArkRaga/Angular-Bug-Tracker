@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { BUGREPORT, USER } from 'src/app/interfaces';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-assigned-bugs',
@@ -8,20 +9,11 @@ import { BUGREPORT, USER } from 'src/app/interfaces';
 })
 export class AssignedBugsComponent implements OnInit {
   @Input() bugReports!: BUGREPORT[];
-  @Input() user!: USER;
   @Output() finialzeReport: EventEmitter<BUGREPORT> = new EventEmitter();
-  reports!: BUGREPORT[];
   constructor() {}
 
-  ngOnInit(): void {
-    this.reports = this.bugReports.filter(
-      (ele) =>
-        ele.assignedWorker?.toLowerCase() === this.user.username.toLowerCase()
-    );
-  }
+  ngOnInit(): void {}
   finishReport(report: BUGREPORT): void {
     this.finialzeReport.emit(report);
-    this.reports = this.reports.filter((ele) => ele.id !== report.id);
-    console.log('Report: ', report);
   }
 }

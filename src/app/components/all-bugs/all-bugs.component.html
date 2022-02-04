@@ -1,6 +1,6 @@
 <app-bug-card
   [isEditable]="true"
-  *ngFor="let report of reports"
+  *ngFor="let report of bugReports"
   [report]="report"
   (acceptBugReport)="userAcceptBugReport($event)"
 ></app-bug-card>

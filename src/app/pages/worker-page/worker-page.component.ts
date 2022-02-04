@@ -10,27 +10,41 @@ import { UsersService } from 'src/app/services/users.service';
   styleUrls: ['./worker-page.component.css'],
 })
 export class WorkerPageComponent implements OnInit {
-  isTriedLoggIn: boolean = false;
-  bugCards!: BUGREPORT[];
-  users!: USER[];
-  currentUser!: USER;
+  allBugCards!: BUGREPORT[];
+  assignedBugCards!: BUGREPORT[];
 
   constructor(
     private bugService: BugreportsService,
     private loginService: LoginService
   ) {
     bugService.getReports().subscribe((r) => {
-      this.bugCards = r;
+      // console.log('Bingo', r);
+      this.allBugCards = r.filter((c) => c.status === 'New');
+      this.assignedBugCards = r.filter(
+        (c) =>
+          c.assignedWorker === loginService.currentUser.username &&
+          c.status === 'in-progress'
+      );
     });
-    this.currentUser = this.loginService.currentUser;
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log('DingDong');
+  }
   userAcceptBugReport(report: BUGREPORT): void {
-    report.assignedWorker = this.currentUser.username;
+    report.assignedWorker = this.loginService.currentUser.username;
     this.bugService.updateReport(report).subscribe((r) => {
-      // this.bugCards.push(r);
-      console.log('r: ', r);
+      this.assignedBugCards.push(r);
+      this.allBugCards = this.allBugCards.filter((c) => c.status === 'New');
+      // console.log('r: ', r);
+    });
+  }
+  userFinalizeBugReport(report: BUGREPORT) {
+    this.bugService.updateReport(report).subscribe((r) => {
+      this.assignedBugCards = this.assignedBugCards.filter(
+        (c) => c.status === 'in-progress'
+      );
+      // console.log('r: ', r);
     });
   }
 }

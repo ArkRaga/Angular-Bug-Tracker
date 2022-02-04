@@ -1,7 +1,7 @@
 <div class="Assigned">
   <app-bug-card
     [isEditable]="false"
-    *ngFor="let report of reports"
+    *ngFor="let report of bugReports"
     [report]="report"
     (finializeReport)="finishReport($event)"
   ></app-bug-card>

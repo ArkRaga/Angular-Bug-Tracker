@@ -1,12 +1,12 @@
 <div>
   <app-all-bugs
     class="All"
-    [bugReports]="bugCards"
+    [bugReports]="allBugCards"
     (acceptBugReport)="userAcceptBugReport($event)"
   ></app-all-bugs>
   <app-assigned-bugs
     class="Assigned"
-    [bugReports]="bugCards"
-    [user]="currentUser"
+    [bugReports]="assignedBugCards"
+    (finialzeReport)="userFinalizeBugReport($event)"
   ></app-assigned-bugs>
 </div>
