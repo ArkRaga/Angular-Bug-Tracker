@@ -1,0 +1,49 @@
+.bugReport {
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  width: 300px;
+}
+.bugReport form {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bugReport h1 {
+  border-bottom: 1px solid whitesmoke;
+}
+
+.bugReport label {
+  margin: 5px;
+  font-size: larger;
+}
+
+.bugInput {
+  background-color: #86a8ab;
+  margin: 5px;
+  border: none;
+}
+.bugReport select {
+  background-color: #86a8ab;
+  color: whitesmoke;
+  margin: 5px;
+  border: none;
+}
+
+.reportBtn {
+  margin: 5px;
+  border-radius: 15px;
+  width: 85px;
+  border: none;
+  color: #d6dfe0;
+  background-color: #244244;
+}
+.reportBtn:hover {
+  background-color: #d6dfe0;
+  color: #244244;
+}

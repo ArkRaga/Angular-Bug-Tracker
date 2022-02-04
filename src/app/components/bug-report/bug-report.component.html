@@ -1,24 +1,28 @@
-<h1>Please fill out the form below</h1>
-<form (ngSubmit)="onSubmit()">
-  <label for="name">name</label>
-  <input
-    type="text"
-    name="name"
-    id="name"
-    [(ngModel)]="name"
-    placeholder="please put your name"
-  />
-  <label for="catagory">Catagory</label>
-  <select name="catagory" id="catagory" [(ngModel)]="catagory">
-    <option disabled>Select catagory</option>
-    <option *ngFor="let cata of catagories">{{ cata }}</option>
-  </select>
-  <label for="description" id="description">description</label>
-  <input
-    type="text"
-    name="description"
-    [(ngModel)]="description"
-    placeholder="describe your issue please"
-  />
-  <input type="submit" value="Submit Bug" />
-</form>
+<div class="bugReport">
+  <h1>Please fill out the form below</h1>
+  <form (ngSubmit)="onSubmit()">
+    <label for="name">Email</label>
+    <input
+      class="bugInput"
+      type="text"
+      name="name"
+      id="name"
+      [(ngModel)]="name"
+      placeholder="please put your Email"
+    />
+    <label for="catagory">Catagory</label>
+    <select name="catagory" id="catagory" [(ngModel)]="catagory">
+      <option disabled>Select catagory</option>
+      <option *ngFor="let cata of catagories">{{ cata }}</option>
+    </select>
+    <label for="description" id="description">Description</label>
+    <textarea
+      class="bugInput"
+      type="text"
+      name="description"
+      [(ngModel)]="description"
+      placeholder="describe your issue please"
+    ></textarea>
+    <input class="reportBtn" type="submit" value="Submit Bug" />
+  </form>
+</div>

@@ -4,3 +4,28 @@
 .Assigned {
   border: 2px solid blue;
 }
+
+.bugcard {
+  color: #244244;
+  background-color: #86a8ab;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  width: 300px;
+  margin: 10px auto;
+  padding: 10px;
+  border: 2px solid whitesmoke;
+  /* border: 2px solid rgb(255, 121, 121); */
+}
+.bugcard button {
+  margin: 0 auto;
+  border-radius: 15px;
+  width: 150px;
+  border: none;
+  color: #d6dfe0;
+  background-color: #244244;
+}
+.bugcard button:hover {
+  background-color: #d6dfe0;
+  color: #244244;
+}

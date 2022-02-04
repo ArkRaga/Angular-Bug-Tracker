@@ -9,7 +9,15 @@ import { UsersService } from './users.service';
 export class LoginService {
   isLoggedIn: boolean = false;
   currentUser!: USER;
-  constructor(private userService: UsersService) {}
+  constructor(private userService: UsersService) {
+    // this.isLoggedIn = true;
+    // this.currentUser = {
+    //   id: 1,
+    //   username: 'ark',
+    //   password: '1234',
+    //   level: 'Admin',
+    // };
+  }
   login(user: USER): Observable<boolean> {
     return this.userService.getUsers().pipe(
       map((u: USER[]) => {
